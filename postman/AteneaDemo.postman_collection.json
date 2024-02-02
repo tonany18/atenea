@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "2febfaa1-4d00-49e4-9920-5e6f44ab208b",
+		"name": "AteneaDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_AllActives",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/activo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"activo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_SaveActive",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Activo 2\",\r\n    \"descripcion\": \"Activo de prueba 2\",\r\n    \"serial\": \"AAFFSC002\",\r\n    \"numInterno\": 1112452,\r\n    \"peso\": 10,\r\n    \"alto\": 10,\r\n    \"ancho\": 10,\r\n    \"largo\": 10,\r\n    \"valorCompra\": 11144.114,\r\n    \"fechaCompra\": \"2022-02-28\",\r\n    \"fechaBaja\": null,\r\n    \"color\": \"Azul\",\r\n    \"tipo\": {\r\n        \"id\": 1\r\n    },\r\n    \"estado\": {\r\n        \"id\": 1\r\n    },\r\n    \"asignaArea\": true,\r\n    \"area\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/activo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"activo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_SeachActives",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/activo/search?tipo=Bienes inmuebles&serial=AAFFSC001&fechaCompra=2022-02-28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"activo",
+						"search"
+					],
+					"query": [
+						{
+							"key": "tipo",
+							"value": "Bienes inmuebles"
+						},
+						{
+							"key": "serial",
+							"value": "AAFFSC001"
+						},
+						{
+							"key": "fechaCompra",
+							"value": "2022-02-28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_SaveActive Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial\": \"12312ddd\",\r\n    \"fechaBaja\": \"2022-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/activo/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"activo",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_AllPersonas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_AllAreas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/area",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"area"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
